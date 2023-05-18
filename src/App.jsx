@@ -61,25 +61,24 @@ const handleChange = (event) => {
     <div className='page'>
 
       <header >
+        <img className="icon"src="./src/assets/popcorn.png" alt="icon" />
         <h1>Movie Finder</h1>
+
         <form className='form' onSubmit={handleSubmit}>
           <input onChange={handleChange} value={search} name="query" type="text" id="" placeholder='Harry Potter, Avengers, El Hobbit...' />
-          
           <button  type='submit'>Search</button>
           <input type="checkbox" onChange={handleSort} checked={sort} />
-          
         </form>
+
         {error && <p className="error" style={{color: 'red'}}>{error}</p>}
       </header>
 
       <main>
-        {
-          loading ? <p>Cargando...</p> : <Movies movies={ movies }/>
-        }
-        
+        {loading ? <p>Cargando...</p> : <Movies movies={ movies }/>}
       </main>
-      
+
     </div>
+    
   )
 }
 
