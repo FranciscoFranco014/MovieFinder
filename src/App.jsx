@@ -30,6 +30,7 @@ const [sort, setSort] = useState(false)
 const {search, updateSearch, error} = useSearch()
 const { movies,loading, getMovies } = useMovies({search, sort})
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
 const debouncedGetMovies = useCallback(
   debounce(search =>{
   console.log('search', search)
@@ -61,7 +62,7 @@ const handleChange = (event) => {
     <div className='page'>
 
       <header >
-        <img className="icon" src="./src/assets/popcorn-svgrepo-com.svg" alt="popcorn-icon" />
+        <img className="logo" src="./src/assets/popcorn-svgrepo-com.svg" alt="popcorn-icon" />
         <h1>Movie Finder</h1>
 
         <form className='form' onSubmit={handleSubmit}>
