@@ -61,7 +61,7 @@ const handleChange = (event) => {
     <div className='page'>
 
       <header >
-        <img className="icon" src="./src/assets/palomitas-de-maiz.png" alt="popcorn-icon" />
+        <img className="icon" src="./src/assets/popcorn-svgrepo-com.svg" alt="popcorn-icon" />
         <h1>Movie Finder</h1>
 
         <form className='form' onSubmit={handleSubmit}>
