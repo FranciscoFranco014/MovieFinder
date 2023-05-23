@@ -49,7 +49,8 @@ const handleSort = () => {
 }
 
 const handleChange = (event) => {
-  const newSearch = event.target.value //ejemplo de PRE-VALIDACION
+  const newSearch = event.target.value
+  if(newSearch.startsWith(' ')) return //ejemplo de PRE-VALIDACION
   updateSearch(newSearch)
   debouncedGetMovies(newSearch)
 }
